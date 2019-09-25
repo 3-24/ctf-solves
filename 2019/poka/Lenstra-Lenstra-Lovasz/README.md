@@ -3,16 +3,13 @@
 > I am not good at Linear Algebra : (
 > Can you tell me about Lenstra-Lenstra-Lovász lattice basis reduction algorithm?
 > Add) e=151. This is for make challenge easy.
-
-[enc.txt](https://github.com/3-24/write-up/blob/master/2019/poka/Lenstra-Lenstra-Lovasz/enc.txt)
-
-[Lenstra-Lenstra-Lovász.sage](https://github.com/3-24/write-up/blob/master/2019/poka/Lenstra-Lenstra-Lovasz/Lenstra%E2%80%93Lenstra%E2%80%93Lov%C3%A1sz.sage)
-
+>
+> [enc.txt](https://github.com/3-24/write-up/blob/master/2019/poka/Lenstra-Lenstra-Lovasz/enc.txt) [Lenstra-Lenstra-Lovász.sage](https://github.com/3-24/write-up/blob/master/2019/poka/Lenstra-Lenstra-Lovasz/Lenstra%E2%80%93Lenstra%E2%80%93Lov%C3%A1sz.sage)
 
 
 ### My Contribution
 
-[diff](https://github.com/pcw109550) worked for this problem a lot. What I did was just some code review and running the sage code in my local machine.
+[diff](https://github.com/pcw109550) worked on this problem a lot. What I did was just some code review and running the sage code in my local machine.
 
 ## Notations
 
@@ -76,7 +73,7 @@ for bits in range (1010,1030):
 
 Also note that $ed_p = k (p-1)+1$ and $d_p < p-1 $, so $k\le e=151$. So bound of `k` and bit-length of `dp` is reasonable.
 
-## Polynomial Modulo `phttps://github.com/pcw109550`
+## Polynomial Modulo `p`
 
 We now have appropriate range for `shiftbits` and `k` to solve
 $$

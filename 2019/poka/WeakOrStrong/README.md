@@ -3,10 +3,8 @@
 > You have two choice- "Weak" and "Strong".
 > What do you want?
 > **Caution! Maybe "Strong" one will took 2 hours to get your treasure.**
-
-[enc.txt](https://github.com/3-24/write-up/blob/master/2019/poka/WeakOrStrong/enc.txt)
-
-[weak-strong.py](https://github.com/3-24/write-up/blob/master/2019/poka/WeakOrStrong/weak-strong.py)
+> 
+> [enc.txt](https://github.com/3-24/write-up/blob/master/2019/poka/WeakOrStrong/enc.txt) [weak-strong.py](https://github.com/3-24/write-up/blob/master/2019/poka/WeakOrStrong/weak-strong.py)
 
 
 
