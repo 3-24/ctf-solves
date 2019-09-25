@@ -38,11 +38,11 @@ Given values are `n,e,ct,s`. Of course the objective is getting the plaintext of
 
 ## Modular Arithmetics
 
-Since $ed \equiv 1 \mod ((p-1)(q-1)) $,
+Since $ed \equiv 1 \mod ((p-1)(q-1)) $,\
 $$
 ed_p \equiv 1 \mod (p-1).
 $$
-Let $ed_p = 1 + (p-1)k $. Then
+Let $ed_p = 1 + (p-1)k $. Then\
 $$
 e(s \ll \texttt{shiftbits} + x ) = 1 + (p-1)k
 $$
@@ -75,11 +75,11 @@ Also note that $ed_p = k (p-1)+1$ and $d_p < p-1 $, so $k\le e=151$. So bound of
 
 ## Polynomial Modulo `p`
 
-We now have appropriate range for `shiftbits` and `k` to solve
+We now have appropriate range for `shiftbits` and `k` to solve\
 $$
 e(s \ll \texttt{shiftbits} + x ) -1 + k \equiv 0 \mod p
 $$
-I used `small_roots` in SageMath to use **Coppersmith's Method** to solve above this.
+I used `small_roots` in SageMath to use **Coppersmith's Method** to solve above this.\
 $$
 s \ll \texttt{shiftbits} + x + (k-1) e^{-1} \equiv 0 \mod N
 $$
