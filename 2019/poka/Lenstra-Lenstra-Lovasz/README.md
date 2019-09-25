@@ -10,6 +10,10 @@
 
 
 
+### My Contribution
+
+[diff](https://github.com/pcw109550) worked for this problem a lot. What I did was just some code review and running the sage code in my local machine.
+
 ## Notations
 
 Before start, let's make the notations clear. 
@@ -72,7 +76,7 @@ for bits in range (1010,1030):
 
 Also note that $ed_p = k (p-1)+1$ and $d_p < p-1 $, so $k\le e=151$. So bound of `k` and bit-length of `dp` is reasonable.
 
-## Polynomial Modulo `p`
+## Polynomial Modulo `phttps://github.com/pcw109550`
 
 We now have appropriate range for `shiftbits` and `k` to solve
 $$
@@ -99,4 +103,4 @@ Therefore we get`dp` and also `p` using $p = \frac {e d_p -1} k +1 $. By process
 POKA{You_4r3_Crypt0_N00000B_XDD}
 ```
 
-[solve.sage](https://github.com/3-24/write-up/blob/master/2019/poka/Lenstra-Lenstra-Lovasz/solve.sage) is the full code.
+You can find the full code in [solve.sage](https://github.com/3-24/write-up/blob/master/2019/poka/Lenstra-Lenstra-Lovasz/solve.sage).
