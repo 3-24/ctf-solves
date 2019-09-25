@@ -4,6 +4,14 @@
 > Can you tell me about Lenstra-Lenstra-Lovász lattice basis reduction algorithm?
 > Add) e=151. This is for make challenge easy.
 
+[enc.txt](https://github.com/3-24/write-up/blob/master/2019/poka/Lenstra-Lenstra-Lovasz/enc.txt)
+
+[Lenstra-Lenstra-Lovász.sage](https://github.com/3-24/write-up/blob/master/2019/poka/Lenstra-Lenstra-Lovasz/Lenstra%E2%80%93Lenstra%E2%80%93Lov%C3%A1sz.sage)
+
+
+
+## Notations
+
 Before start, let's make the notations clear. 
 
 * `n` : RSA modulus
@@ -27,6 +35,8 @@ Given values are `n,e,ct,s`. Of course the objective is getting the plaintext of
 
 
 
+## Modular Arithmetics
+
 Since $ed \equiv 1 \mod ((p-1)(q-1)) $,
 $$
 ed_p \equiv 1 \mod (p-1).
@@ -35,7 +45,9 @@ Let $ed_p = 1 + (p-1)k $. Then
 $$
 e(s \ll \texttt{shiftbits} + x ) = 1 + (p-1)k
 $$
-We have bit-length of `secret` which is approximately 6/10 bit-length of `dp`, which was 614. Therefore `bits` is 1023 or 1024.
+## Range For `bit` and `shiftbits`
+
+We have bit-length of `secret` which is approximately 6/10 bit-length of `dp`, which was 614. Therefore `bits` is either 1023 or 1024.
 
 ```python
 for bits in range (1010,1030):
@@ -60,11 +72,13 @@ for bits in range (1010,1030):
 
 Also note that $ed_p = k (p-1)+1$ and $d_p < p-1 $, so $k\le e=151$. So bound of `k` and bit-length of `dp` is reasonable.
 
+## Polynomial Modulo `p`
+
 We now have appropriate range for `shiftbits` and `k` to solve
 $$
 e(s \ll \texttt{shiftbits} + x ) -1 + k \equiv 0 \mod p
 $$
-Now I used `small_roots` in SageMath to use Coppersmith's Method to solve above this.
+I used `small_roots` in SageMath to use **Coppersmith's Method** to solve above this.
 $$
 s \ll \texttt{shiftbits} + x + (k-1) e^{-1} \equiv 0 \mod N
 $$
@@ -79,8 +93,10 @@ def coppersmith(shiftbits, k):
     return x0
 ```
 
-Also I could recover `dp`, and also `p` using $p = \frac {e d_p -1} k +1 $. By processing a simple RSA decryption, I could get a flag.
+Therefore we get`dp` and also `p` using $p = \frac {e d_p -1} k +1 $. By processing a simple RSA decryption, I could get a flag.
 
 ```
 POKA{You_4r3_Crypt0_N00000B_XDD}
 ```
+
+[solve.sage](https://github.com/3-24/write-up/blob/master/2019/poka/Lenstra-Lenstra-Lovasz/solve.sage) is the full code.
