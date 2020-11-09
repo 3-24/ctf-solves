@@ -144,4 +144,4 @@ p.sendline(str(new_got_value))
 p.interactive()
 ```
 
-flag is `Now I can safely trust you that you have credential :)`.
+flag is `Sorry mom.. I got confused about scanf usage :(`.
