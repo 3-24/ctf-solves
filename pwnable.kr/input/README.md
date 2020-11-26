@@ -226,7 +226,7 @@ print(p.recvall())
 
 On pwnable.kr server, read and write permission is enabled in `/etc/{any directory name}`. So we can write and run python code in it.
 
-Also, be aware of the fact the `flag` should exists in your local path `.`
+Also, be aware of the fact the `flag` must exist in your local path `.`.
 ```c
 // here's your flag
 system("/bin/cat flag");
