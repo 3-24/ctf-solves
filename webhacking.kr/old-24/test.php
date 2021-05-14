@@ -1,4 +1,5 @@
 <?php
+// Check if $ip passes the giver filter
 $ip = "112277....00....00....1";
 $ip = htmlspecialchars($ip);
 $ip = str_replace("..",".",$ip);

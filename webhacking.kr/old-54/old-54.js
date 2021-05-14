@@ -1,3 +1,4 @@
+// Run this script on https://webhacking.kr/challenge/bonus-14/
 function answer(i){
     x = new XMLHttpRequest();
     x.open('GET','https://webhacking.kr/challenge/bonus-14/?m='+i,false);
