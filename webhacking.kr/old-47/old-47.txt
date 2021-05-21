@@ -1,2 +1,0 @@
-Simple email injection.
-Cc: example@example.com
