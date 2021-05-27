@@ -1,2 +1,2 @@
 # ctf-write-up
-Collection of write-ups of CTF challenges.
+Collection of solutions of CTF challenges.
